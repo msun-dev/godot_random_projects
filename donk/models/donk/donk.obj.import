@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dorxhl41hcpia"
+path="res://.godot/imported/donk.obj-2e1858fc6707038c7215c6de3e74a3c8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/donk.obj-2e1858fc6707038c7215c6de3e74a3c8.mesh"]
+
+source_file="res://models/donk/donk.obj"
+dest_files=["res://.godot/imported/donk.obj-2e1858fc6707038c7215c6de3e74a3c8.mesh", "res://.godot/imported/donk.obj-2e1858fc6707038c7215c6de3e74a3c8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

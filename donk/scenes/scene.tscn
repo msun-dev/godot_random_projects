@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://ils3wgj7d3fn"]
+
+[ext_resource type="Shader" path="res://shaders/stars.gdshader" id="1_kq1hg"]
+[ext_resource type="Shader" path="res://shaders/pixel.gdshader" id="2_30bev"]
+[ext_resource type="ArrayMesh" uid="uid://dorxhl41hcpia" path="res://models/donk/donk.obj" id="3_uxmb0"]
+[ext_resource type="Script" path="res://models/donk/spin.gd" id="4_phvxn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tps73"]
+shader = ExtResource("1_kq1hg")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 100.0
+shader_parameter/small_stars_far_size = 0.6
+shader_parameter/small_stars_near_size = 1.0
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.5
+shader_parameter/large_stars_near_size = 0.3
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.02
+
+[sub_resource type="Environment" id="Environment_tq1eh"]
+background_mode = 3
+background_canvas_max_layer = -100
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m72ms"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awoxe"]
+render_priority = 0
+shader = ExtResource("2_30bev")
+
+[node name="root" type="Node"]
+
+[node name="Parallax" type="ParallaxBackground" parent="."]
+
+[node name="Stars" type="ColorRect" parent="Parallax"]
+material = SubResource("ShaderMaterial_tps73")
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tq1eh")
+
+[node name="Camera" type="Camera3D" parent="."]
+fov = 60.4299
+
+[node name="Pixel" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(2.50041, 0, 0, 0, -4.37114e-08, -0.731943, 0, 1, -3.19943e-08, 0, 0, -0.935286)
+mesh = SubResource("PlaneMesh_m72ms")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_awoxe")
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.957692, 0.0476584, -0.283822, 0, 0.986193, 0.165598, 0.287795, -0.158592, 0.944469, -2.82794, 1.68716, 4.98754)
+light_energy = 0.45
+sky_mode = 1
+
+[node name="Origin" type="Node3D" parent="."]
+transform = Transform3D(-0.176777, 0, -0.176777, 0, 0.25, 0, 0.176777, 0, -0.176777, 0, 0, -2.747)
+script = ExtResource("4_phvxn")
+
+[node name="Donk" type="MeshInstance3D" parent="Origin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.829, 0)
+mesh = ExtResource("3_uxmb0")
+skeleton = NodePath("../..")
