@@ -1,0 +1,694 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://resources/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/objects/pot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/level/game.gd" type="Script" id=3]
+[ext_resource path="res://resources/sprites/earrape.png" type="Texture" id=4]
+[ext_resource path="res://resources/level/color_reactangle.gd" type="Script" id=5]
+[ext_resource path="res://resources/sprites/pots.png" type="Texture" id=6]
+[ext_resource path="res://resources/sprites/help.png" type="Texture" id=7]
+[ext_resource path="res://resources/sprites/more_pots.png" type="Texture" id=8]
+[ext_resource path="res://resources/sprites/background.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 24 )
+
+[node name="game" type="Node"]
+script = ExtResource( 3 )
+
+[node name="player" type="Node" parent="."]
+
+[node name="player" parent="player" instance=ExtResource( 1 )]
+position = Vector2( -56, 192 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+
+[node name="camera" type="Camera2D" parent="player/player"]
+current = true
+smoothing_speed = 10.0
+
+[node name="objects" type="Node" parent="."]
+
+[node name="pots" type="Node" parent="objects"]
+
+[node name="pot" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 0.5, 264 )
+will_play_dialog = true
+dialog_name = "outro"
+
+[node name="pot2" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 272 )
+
+[node name="pot3" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 240 )
+
+[node name="pot187" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 240 )
+
+[node name="pot4" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 272 )
+
+[node name="pot5" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 112 )
+
+[node name="pot6" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 144 )
+
+[node name="pot7" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 112 )
+
+[node name="pot8" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 144 )
+
+[node name="pot9" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 48 )
+
+[node name="pot10" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 80 )
+
+[node name="pot11" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 48 )
+
+[node name="pot12" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 80 )
+
+[node name="pot13" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 48 )
+
+[node name="pot14" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 80 )
+
+[node name="pot15" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 48 )
+
+[node name="pot16" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 80 )
+
+[node name="pot17" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 48 )
+
+[node name="pot18" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 80 )
+
+[node name="pot19" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 48 )
+
+[node name="pot20" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 80 )
+
+[node name="pot33" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 48 )
+
+[node name="pot34" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 80 )
+
+[node name="pot35" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 48 )
+
+[node name="pot36" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 80 )
+
+[node name="pot21" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 112 )
+
+[node name="pot22" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 144 )
+
+[node name="pot23" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 112 )
+
+[node name="pot24" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 144 )
+
+[node name="pot25" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 112 )
+
+[node name="pot26" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 144 )
+
+[node name="pot27" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 112 )
+
+[node name="pot28" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 144 )
+
+[node name="pot29" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 112 )
+
+[node name="pot30" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 144 )
+
+[node name="pot31" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 112 )
+
+[node name="pot32" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 144 )
+
+[node name="pot40" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 176 )
+
+[node name="pot41" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 208 )
+
+[node name="pot42" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 176 )
+
+[node name="pot43" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 208 )
+
+[node name="pot44" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 240 )
+
+[node name="pot45" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 272 )
+
+[node name="pot46" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 240 )
+
+[node name="pot47" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 272 )
+
+[node name="pot37" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 48 )
+
+[node name="pot38" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 80 )
+
+[node name="pot39" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 48 )
+
+[node name="pot64" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 80 )
+
+[node name="pot65" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 112 )
+
+[node name="pot66" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 144 )
+
+[node name="pot67" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 112 )
+
+[node name="pot68" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 144 )
+
+[node name="pot69" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 176 )
+
+[node name="pot70" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 208 )
+
+[node name="pot71" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 176 )
+
+[node name="pot72" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 208 )
+
+[node name="pot73" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 240 )
+
+[node name="pot74" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 272 )
+
+[node name="pot75" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 240 )
+
+[node name="pot76" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 272 )
+
+[node name="pot48" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 240 )
+
+[node name="pot49" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 272 )
+
+[node name="pot50" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 240 )
+
+[node name="pot51" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 272 )
+
+[node name="pot52" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 240 )
+
+[node name="pot53" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 272 )
+
+[node name="pot54" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 240 )
+
+[node name="pot55" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 272 )
+
+[node name="pot77" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 304 )
+
+[node name="pot78" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 336 )
+
+[node name="pot79" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 304 )
+
+[node name="pot80" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 336 )
+
+[node name="pot81" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 304 )
+
+[node name="pot82" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 240, 336 )
+
+[node name="pot83" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 304 )
+
+[node name="pot84" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 272, 336 )
+
+[node name="pot85" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 304 )
+
+[node name="pot86" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 176, 336 )
+
+[node name="pot87" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 304 )
+
+[node name="pot88" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 208, 336 )
+
+[node name="pot89" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 304 )
+
+[node name="pot90" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 304, 336 )
+
+[node name="pot91" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 304 )
+
+[node name="pot92" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 336, 336 )
+
+[node name="pot93" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 304 )
+
+[node name="pot94" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 336 )
+
+[node name="pot95" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 304 )
+
+[node name="pot96" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 336 )
+
+[node name="pot97" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -48, 48 )
+
+[node name="pot98" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -16, 48 )
+
+[node name="pot99" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -240, 48 )
+
+[node name="pot100" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -208, 48 )
+
+[node name="pot101" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -304, 48 )
+
+[node name="pot102" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -272, 48 )
+
+[node name="pot103" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -176, 48 )
+
+[node name="pot104" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -144, 48 )
+
+[node name="pot105" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -112, 48 )
+
+[node name="pot106" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -80, 48 )
+
+[node name="pot107" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot108" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot109" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot110" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot111" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot112" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot113" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot114" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot115" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot116" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot117" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot118" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot119" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot120" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot121" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot122" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot123" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot124" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot125" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot126" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot127" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot128" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot129" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot130" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot131" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot132" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot133" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot134" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot135" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot136" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot137" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot138" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot139" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot140" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot141" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot142" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot143" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot144" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot145" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot146" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot147" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot148" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot149" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot150" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot151" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot152" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot153" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot154" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot155" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot156" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot157" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot158" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot159" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot160" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot161" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot162" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot163" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot164" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot165" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot166" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot167" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot168" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot169" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot170" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot171" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot172" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot173" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot174" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot175" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot176" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot177" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot178" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot179" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot180" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot181" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot182" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot183" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot184" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot185" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot186" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( -160, 326.5 )
+
+[node name="pot56" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 176 )
+
+[node name="pot57" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 368, 208 )
+
+[node name="pot58" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 176 )
+
+[node name="pot59" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 400, 208 )
+
+[node name="pot60" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 176 )
+
+[node name="pot61" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 432, 208 )
+
+[node name="pot62" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 176 )
+
+[node name="pot63" parent="objects/pots" instance=ExtResource( 2 )]
+position = Vector2( 464, 208 )
+
+[node name="help_sprites" type="Node" parent="objects"]
+
+[node name="earrape" type="Sprite" parent="objects/help_sprites"]
+position = Vector2( -88, 326.5 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="help" type="Sprite" parent="objects/help_sprites"]
+position = Vector2( -288, 136 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="more_pots" type="Sprite" parent="objects/help_sprites"]
+position = Vector2( 96, 184 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="pots" type="Sprite" parent="objects/help_sprites"]
+position = Vector2( -160, 88 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="colissions" type="Node" parent="."]
+
+[node name="box" type="StaticBody2D" parent="colissions"]
+position = Vector2( -240, 288 )
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="colission" type="CollisionShape2D" parent="colissions/box"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="colissions/box"]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -40, -24, -40, 24, 40, 24, 40, -24 )
+
+[node name="box2" type="StaticBody2D" parent="colissions"]
+position = Vector2( -320, 288 )
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="colission" type="CollisionShape2D" parent="colissions/box2"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="colissions/box2"]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -40, -24, -40, 24, 40, 24, 40, -24 )
+
+[node name="box3" type="StaticBody2D" parent="colissions"]
+position = Vector2( -344, 272 )
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="colission" type="CollisionShape2D" parent="colissions/box3"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="colissions/box3"]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -40, -24, -40, 24, 40, 24, 40, -24 )
+
+[node name="box4" type="StaticBody2D" parent="colissions"]
+position = Vector2( -288, 264 )
+rotation = 0.785397
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="colission" type="CollisionShape2D" parent="colissions/box4"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="colissions/box4"]
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -40, -24, -40, 24, 40, 24, 40, -24 )
+
+[node name="shader_layer" type="CanvasLayer" parent="."]
+
+[node name="color_reactangle" type="ColorRect" parent="shader_layer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="dialog_layer" type="CanvasLayer" parent="."]
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( -637.983, 358.147 )
+texture = ExtResource( 9 )

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is preview text. You can use [color=#A5EFAC]BBCode[/color] to style it. [wave]You can even use effects![/wave]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1626766390.json",
+		"name": "test"
+	}
+}

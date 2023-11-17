@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/forsen_10lines_shungite.mp3-1e136e49ca75d52ca6e2c6d720207295.mp3str"
+
+[deps]
+
+source_file="res://audio/forsen_10lines_shungite.mp3"
+dest_files=[ "res://.import/forsen_10lines_shungite.mp3-1e136e49ca75d52ca6e2c6d720207295.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

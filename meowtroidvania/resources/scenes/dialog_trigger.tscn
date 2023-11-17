@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/area_dialog_trigger.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 48 )
+
+[node name="dialog_trigger" type="Area2D"]
+script = ExtResource( 1 )
+dialog_name = "test"
+active = true
+
+[node name="shape" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="delay" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_dialog_trigger_body_entered"]

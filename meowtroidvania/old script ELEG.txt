@@ -1,0 +1,44 @@
+#func _physics_process(delta):
+#	get_proprts()
+#	print(state, " ", movement, " ", y_velocity, " On ground-", grounded)
+#
+#	# IDLE we are doing nothing and playing idle anim, when we receive some input, change to MOVE or
+#	# AIR respectively 	
+#	# MOVE state - we moving left and right, when we not touching flor - swapping to AIR
+#	# AIR - we falling and moving in air, that's all, also we can't jump here
+#
+#	#get movement input and apply it. Should be in MOVE and AIR (if we want move when we in air)
+#	movement = Vector2.ZERO
+#	movement.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+#
+#	#apply gravity to y_velocity. Add to MOVE and AIR
+#	y_velocity += gravity
+#
+#	#if jump button pressed, we addd some value to y_velo. add to MOVE and IDLE
+#	#then we swapping to AIR state
+#	if grounded and Input.is_action_just_pressed("jump"): 
+#		y_velocity = -jump_force
+#
+#	#we should remove velocity from gravity when we standing on ground. add to MOVE and IDLE 
+#	# (actually i shouldnt add it to idle, i will not have move_and_slide in IDLE, so i'm not supposed
+#	# to reset y_velo here. Maybe we shouldn't have that piece anywhere, when we MOVE we dont move
+#	# at y coord so we don't need that, when we in AIR we don't touch floor, when we IDLE we do nothing)
+#	if grounded and y_velocity >= 5: 
+#		y_velocity = 5
+#
+#	#when we falling y_velocity shouldn't exceed set value, overwise we will get shitton of speed
+#	#while falling. Add to AIR
+#	if y_velocity >= max_fall_speed: 
+#		y_velocity = max_fall_speed
+#
+#	#when we are in air and touch ceiling, reset y_velocity. Overwise we will stick to it 
+#	#until y_velo < 0. add to AIR
+#	if is_on_ceiling():
+#		y_velocity = 0
+#
+#	#updating y of movement and multiplying x and speed, add to MOVE and AIR
+#	movement.y = y_velocity
+#	movement.x *= move_speed
+#
+#	#updating player's position when we are moving. Add it to MOVE and AIR
+#	move_and_slide(movement, Vector2(0, -1))

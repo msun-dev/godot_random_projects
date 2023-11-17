@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "the end!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.1",
+		"file": "timeline-1626785788.json",
+		"name": "outro"
+	}
+}
