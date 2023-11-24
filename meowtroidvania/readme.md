@@ -1,13 +1,7 @@
-# Godot 2D Camera Limiter
+# meowtreidvania
 
-Working on a top-down or sidescroller game and sick of how much of that sweet
-sweet camera real estate is outside the level? Fret no more!
+MWP of mine where i tried to make 2-colors platformer starring a cat
 
-This plugin lets you dynamically change the camera's built-in limits smoothly
-depending on where your player is currently traveling. When the player enters
-a camera-limiting-area, this plugin tweens the camera limits.
+I hate Gato-Roboto very much so thats why i made it
 
-It does this by adding two custom nodes: one that you attach to your actual
-camera object (composition ftw) that handles the actual tweening, and another
-that extends Area2D that you use to configure areas that should have camera
-limits in your game world.
+You can try it here: https://msun.itch.io/meowtroidvania
